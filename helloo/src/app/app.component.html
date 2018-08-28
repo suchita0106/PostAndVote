@@ -1,0 +1,22 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Add a link</h3>
+  <div class="form-group row">
+    <label for="title" class="col-sm-1 col-form-label" >Title:</label>
+    <div class="col-sm-7">
+    <input name="title" class="form-control" #nt >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="link"  class="col-sm-1 col-form-label" >Link:</label>
+    <div class="col-sm-7">
+    <input name="link"  class="form-control" #nl >
+  </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-2" (click)="addArticle(nt,nl)">Submit</button>
+  </div>
+</form>
+
+<div>
+  <app-article-component title = {{title}}></app-article-component>
+</div>
